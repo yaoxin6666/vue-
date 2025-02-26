@@ -9,13 +9,13 @@
 <body>
   
   <div id="app">
-    <p>性别：♂ 男</p>
-    <p>性别：♀ 女</p>
+    <p v-if="gender===1">性别：♂ 男</p>
+    <p v-else>性别：♀ 女</p>
     <hr>
-    <p>成绩评定A：奖励电脑一台</p>
-    <p>成绩评定B：奖励周末郊游</p>
-    <p>成绩评定C：奖励零食礼包</p>
-    <p>成绩评定D：惩罚一周不能玩手机</p>
+    <p v-if="score>=90">成绩评定A：奖励电脑一台</p>
+    <p v-else-if="score>=70">成绩评定B：奖励周末郊游</p>
+    <p v-else-if="score>=60">成绩评定C：奖励零食礼包</p>
+    <p v-else>成绩评定D：惩罚一周不能玩手机</p>
   </div>
   
   <script src="./vue.js"></script>
@@ -24,7 +24,8 @@
     const app = new Vue({
       el: '#app',
       data: {
-
+gender:1,
+score:90
       }
     })
   </script>
