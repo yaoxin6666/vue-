@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body>
   <div id="app">
-    {{nickname}}
-    {{nickname +'你好'}}
-    <p>{{age>=18?'成年':'未成年'}}</p>
-    <p>
-      {{friend.desc}}
-    </p>
-    <p>{{friend.name}}</p>
+    <button>切换显示隐藏</button>
+    <h1>黑马程序员</h1>
   </div>
-
   <script src="./vue.js"></script>
   <script>
-
     const app = new Vue({
       el: '#app',
       data: {
-        nickname: '姚鑫',
-        age: 18,
-        friend: {
-          name: 'tom',
-          desc: '热爱学习'
-        }
-      },
+        
+      }
     })
   </script>
 </body>
-
 </html>
