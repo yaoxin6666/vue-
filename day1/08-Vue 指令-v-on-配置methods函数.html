@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div id="app">
-    <button>切换显示隐藏</button>
-    <h1>小姚学vue</h1>
+    <button @click="fn">切换显示隐藏</button>
+    <h1 v-show="isShow">小姚学vue</h1>
   </div>
   <script src="./vue.js"></script>
   <script>
     const app = new Vue({
       el: '#app',
       data: {
-        
+        isShow: true
       },
-      methods:{
-//提供处理逻辑
-
+      methods: {
+        //提供处理逻辑
+        fn() {
+          this.isShow = !this.isShow
+        }
       },
     })
   </script>
 </body>
+
 </html>
