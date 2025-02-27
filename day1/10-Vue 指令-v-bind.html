@@ -7,15 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app">
-
+  <div id="app" >
+<img v-bind:src="imgUrl"alt="">
   </div>
   <script src="./vue.js"></script>
   <script>
     const app = new Vue({
       el: '#app',
       data: {
-        
+        imgUrl:'./imgs/10-01.png'
       }
     })
 

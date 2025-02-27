@@ -11,10 +11,10 @@
   <div id="app">
     <h3>小黑的书架</h3>
     <ul>
-      <li>
-        <span>《红楼梦》</span>
-        <span>曹雪芹</span>
-        <button>删除</button>
+      <li v-for="item in booksList" key="item.id">
+        <span>{{item.name}}</span>
+        <span>{{item.author}}</span>
+        <button @click="del(item.id)">删除</button>
       </li>
     </ul>
   </div>
@@ -29,6 +29,11 @@
           { id: 3, name: '《水浒传》', author: '施耐庵' },
           { id: 4, name: '《三国演义》', author: '罗贯中' }
         ]
+      },methods:{
+del(id){
+  this.booksList=this.booksList.filter(item=>item.id!==id)
+}
+
       }
     })
   </script>

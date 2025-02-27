@@ -9,17 +9,31 @@
 <body>
 
   <div id="app">
-    账户：<input type="text"> <br><br>
-    密码：<input type="password"> <br><br>
-    <button>登录</button>
-    <button>重置</button>
+    账户：<input type="text" v-model="username"> <br><br>
+    密码：<input type="password" v-model="password"> <br><br>
+    <button @click="login">登录</button>
+    <button @click="reset">重置</button>
   </div>
   <script src="./vue.js"></script>
   <script>
     const app = new Vue({
       el: '#app',
       data: {
-        
+        username:'',
+        password:'',
+      },
+      methods:{
+login(){
+  if(this.username===''||this.password===''){
+alert('请输入账号或密码')
+return
+}
+  alert('登陆成功')
+},
+reset(){
+this.username='',
+this.password=''
+}
       }
     })
   </script>
