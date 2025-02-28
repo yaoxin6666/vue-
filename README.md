@@ -46,6 +46,7 @@ v-model修饰符：.trim(清楚首尾空格),.number（转换为数字型）
 computed和methods的区别：
 computed有缓存，一旦计算出来结果，就会立刻缓存，下一次读取，直接读缓存就行
 methods每次调用都会独立执行
+2025/2/28
 计算属性的完整方法：
 计算属性:{
 get(){
@@ -91,4 +92,46 @@ immediate: true, // 是否立刻执行一次handler
  }
  }
  }
- 
+vue生命周期：一个vue实例从创建到销毁的全过程
+生命周期的四个阶段：创建（响应式数据）->挂载（渲染模板）->更新（数据修改<==>更新视图）->销毁（销毁实例）
+创建阶段就可以发送初始化渲染请求，挂载阶段可以开始操作dom
+生命周期钩子：Vue生命周期过程中，会自动运行一些函数，被称为【生命周期钩子】→  让开发者可以在【特定阶段】运行自己的代码。共八个四对
+beforeCreate（），created（）， beforeMount（），mounted（）， beforeUpdate（），updated(), beforeDestroy(),destroyed()
+ 钩子函数要和data在同一层面
+      // 1. 创建阶段（准备数据）
+      beforeCreate () {
+        console.log('beforeCreate 响应式数据准备好之前', this.count)
+      },
+      created () {
+        console.log('created 响应式数据准备好之后', this.count)
+        // this.数据名 = 请求回来的数据
+        // 可以开始发送初始化渲染的请求了
+      },
+
+      // 2. 挂载阶段（渲染模板）
+      beforeMount () {
+        console.log('beforeMount 模板渲染之前', document.querySelector('h3').innerHTML)
+      },
+      mounted () {
+        console.log('mounted 模板渲染之后', document.querySelector('h3').innerHTML)
+        // 可以开始操作dom了
+      },
+
+      // 3. 更新阶段(修改数据 → 更新视图)
+      beforeUpdate () {
+        console.log('beforeUpdate 数据修改了，视图还没更新', document.querySelector('span').innerHTML)
+      },
+      updated () {
+        console.log('updated 数据修改了，视图已经更新', document.querySelector('span').innerHTML)
+      },
+
+      // 4. 卸载阶段
+      beforeDestroy () {
+        console.log('beforeDestroy, 卸载前')
+        console.log('清除掉一些Vue以外的资源占用，定时器，延时器...')
+      },
+      destroyed () {
+        console.log('destroyed，卸载后')
+      }
+      卸载的命令app.$destory()
+
