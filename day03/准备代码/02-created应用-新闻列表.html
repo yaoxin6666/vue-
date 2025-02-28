@@ -50,44 +50,19 @@
 
   <div id="app">
     <ul>
-      <li class="news">
+      <li v-for="(item,index) in list" :key="item.id" class="news">
         <div class="left">
-          <div class="title">5G商用在即，三大运营商营收持续下降</div>
+          <div class="title">{{item.title}}</div>
           <div class="info">
-            <span>新京报经济新闻</span>
-            <span>2222-10-28 11:50:28</span>
+            <span>{{item.source}}</span>
+            <span>{{item.time}}</span>
           </div>
         </div>
         <div class="right">
-          <img src="http://ajax-api.itheima.net/public/images/0.webp" alt="">
+          <img :src="item.img" alt="">
         </div>
       </li>
 
-      <li class="news">
-        <div class="left">
-          <div class="title">5G商用在即，三大运营商营收持续下降</div>
-          <div class="info">
-            <span>新京报经济新闻</span>
-            <span>2222-10-28 11:50:28</span>
-          </div>
-        </div>
-        <div class="right">
-          <img src="http://ajax-api.itheima.net/public/images/0.webp" alt="">
-        </div>
-      </li>
-
-      <li class="news">
-        <div class="left">
-          <div class="title">5G商用在即，三大运营商营收持续下降</div>
-          <div class="info">
-            <span>新京报经济新闻</span>
-            <span>2222-10-28 11:50:28</span>
-          </div>
-        </div>
-        <div class="right">
-          <img src="http://ajax-api.itheima.net/public/images/0.webp" alt="">
-        </div>
-      </li>
     </ul>
   </div>
   <script src="./vue.js"></script>
@@ -98,7 +73,11 @@
     const app = new Vue({
       el: '#app',
       data: {
-        
+        list:[]
+      },
+     async created(){
+      const res=await axios.get('http://hmajax.itheima.net/api/news')
+     this.list=res.data.data
       }
     })
   </script>
