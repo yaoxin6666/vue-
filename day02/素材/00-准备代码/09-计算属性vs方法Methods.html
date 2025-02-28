@@ -34,7 +34,7 @@
 <body>
 
   <div id="app">
-    <h3>小黑的礼物清单🛒<span>?</span></h3>
+    <h3>小黑的礼物清单🛒<span>{{sum()}}</span></h3>
     <table>
       <tr>
         <th>名字</th>
@@ -46,7 +46,7 @@
       </tr>
     </table>
 
-    <p>礼物总数：{{ totalCount }} 个</p>
+    <p>礼物总数：{{sum() }} 个</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script>
@@ -60,8 +60,14 @@
           { id: 3, name: '铅笔', num: 5 },
         ]
       },
-      computed: {
-        totalCount () {
+      // computed: {
+      //   totalCount () {
+      //     let total = this.list.reduce((sum, item) => sum + item.num, 0)
+      //     return total
+      //   }
+      // },
+      methods:{
+        sum(){
           let total = this.list.reduce((sum, item) => sum + item.num, 0)
           return total
         }

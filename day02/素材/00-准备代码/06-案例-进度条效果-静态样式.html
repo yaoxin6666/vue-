@@ -36,21 +36,21 @@
 <body>
   <div id="app">
     <div class="progress">
-      <div class="inner">
-        <span>50%</span>
+      <div class="inner" :style="{width:percent+'%'}">
+        <span>{{percent}}%</span>
       </div>
     </div>
-    <button>设置25%</button>
-    <button>设置50%</button>
-    <button>设置75%</button>
-    <button>设置100%</button>
+    <button @click="percent=25">设置25%</button>
+    <button @click="percent=50">设置50%</button>
+    <button @click="percent=75">设置75%</button>
+    <button @click="percent=100">设置100%</button>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="./vue.js"></script>
   <script>
     const app = new Vue({
       el: '#app',
       data: {
-
+percent:0,
       }
     })
   </script>
