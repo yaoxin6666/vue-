@@ -57,3 +57,38 @@ set(){
 //执行逻辑
 }
 }
+watch监听：：监视数据变化，执行一些业务逻辑或异步操作。
+语法
+简写版：简单数据类型直接监听
+data: {
+ obj: {
+ words: '苹果',
+ lang: 'italy'
+ },
+ }
+watch: {
+ // 该方法会在数据变化时，触发执行
+数据属性名 (newValue, oldValue) {
+一些业务逻辑 或 异步操作。
+},
+ '对象.属性名' (newValue, oldValue) {
+一些业务逻辑 或 异步操作。
+}
+ }
+ 完整版：添加额外配置项，直接传入一个对象
+ ata: {
+ obj: {
+ words: '苹果',
+ lang: 'italy'
+ },
+ },
+ watch: {// watch 完整写法
+数据属性名: {
+ deep: true, // 深度监视
+immediate: true, // 是否立刻执行一次handler
+ handler (newValue) {
+ console.log(newValue)
+ }
+ }
+ }
+ 
