@@ -8,7 +8,13 @@
 
 <script>
 export default {
-  data() {
+  // data() {
+  //   console.log('函数执行了')
+  //   return {
+  //     count: 100,
+  //   }
+  // },
+  data: function () {
     return {
       count: 100,
     }
