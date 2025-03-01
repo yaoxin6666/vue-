@@ -1,4 +1,4 @@
-2025/2/26
+       2025/2/26
 学习了:
 1.插值表达式，
 注意点：使用的数据要存在
@@ -134,4 +134,18 @@ beforeCreate（），created（）， beforeMount（），mounted（）， befor
         console.log('destroyed，卸载后')
       }
       卸载的命令app.$destory()
-
+2025/3/1
+工程化开发& 脚手架Vue CLI
+1. 全局安装(一次) ：yarn global add @vue/cli    或 npm i  @vue/cli  -g
+2. 查看 Vue 版本：vue  --version
+ 3. 创建项目架子：vue  create  project-name（项目名-不能用中文）
+4. 启动项目：yarn  serve  或 npm run serve（找package.json）
+5. 组件开发：
+ 组件化：一个页面可以拆分成一个个组件，每个组件有着自己独立的结构、样式、行为。
+好处：便于维护，利于复用→ 提升开发效率。
+组件分类：普通组件、根组件。
+根组件：整个应用最上层的组件，包裹所有普通小组件。
+App.vue 文件（单文件组件）的三个组成部分
+ template：结构（有且只能一个根元素）
+script:   js逻辑
+style：样式(可支持less，需要装包)
