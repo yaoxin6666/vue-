@@ -139,6 +139,44 @@
       created() {
         this.getList()
       },
+      mounted() {
+        this.myChart = echarts.init(document.querySelector('#main'))
+        this.myChart.setOption({
+          // 大标题
+          title: {
+            text: '消费账单列表',
+            left: 'center'
+          },
+          // 提示框
+          tooltip: {
+            trigger: 'item'
+          },
+          // 图例
+          legend: {
+            orient: 'vertical',
+            left: 'left'
+          },
+          // 数据项
+          series: [
+            {
+              name: '消费账单',
+              type: 'pie',
+              radius: '50%', // 半径
+              data: [
+                // { value: 1048, name: '球鞋' },
+                // { value: 735, name: '防晒霜' }
+              ],
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }
+          ]
+        })
+      },
       methods: {
         async getList() {
           await axios({
@@ -151,6 +189,16 @@
             console.log(res);
 
             this.list = res.data.data
+
+          })
+          // 更新图表,已经配置过的，不需要再传
+          this.myChart.setOption({
+            series: [
+              {
+                data: this.list.map(item=>({value:item.price,name:item.name}))
+                ,
+              }
+            ]
           })
         },
         async add() {
