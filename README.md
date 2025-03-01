@@ -149,3 +149,35 @@ App.vue 文件（单文件组件）的三个组成部分
  template：结构（有且只能一个根元素）
 script:   js逻辑
 style：样式(可支持less，需要装包)
+全局样式(默认)：影响所有组件
+局部样式：scoped下样式，只作用于当前组件
+scoped原理？
+1. 当前组件内标签都被添加data-v-hash值的属性
+2. css选择器都被添加[data-v-hash值] 的属性选择器
+最终效果: 必须是当前组件的元素, 才会有这个自定义属性, 才会被这个样式作用到
+data 是一个函数：一个组件的data选项必须是一个函数。→   保证每个组件实例，维护独立的一份数据对象。
+每次创建新的组件实例，都会新执行一次data 函数，得到一个新对象。
+组件三大组成部分的注意点：
+1. 结构：有且只能一个根元素
+2. 样式：默认全局样式，加上scoped局部样式
+3. 逻辑：data是一个函数，保证数据独立。
+组件通信, 就是指组件与组件之间的数据传递。
+组件的数据是独立的，无法直接访问其他组件的数据。
+组件关系分类：
+1. 父子关系
+2. 非父子关系
+1. 父组件通过props将数据传递给子组件
+2. 子组件利用$emit通知父组件修改更新
+![image](https://github.com/user-attachments/assets/4ec65997-2e89-4ba0-b4c4-bd6e839b2f46)
+子传父
+![image](https://github.com/user-attachments/assets/338677c9-e354-41cf-94fc-5cf11a8735d2)
+父传子
+![image](https://github.com/user-attachments/assets/e1b9896f-f55b-4fbc-902b-b46062b91bf0)
+父子关系 →    props & $emit
+非父子关系 →    provide & inject   或 eventbus
+通用方案 →    vuex
+ 父子通信方案的核心流程
+2.1 父传子props：
+父中给子添加属性传值 ②子props 接收 ③子组件使用
+2.2 子传父$emit：
+子$emit 发送消息②父中给子添加消息监听③父中实现处理函数
