@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getFormData() {
-      console.log('获取表单数据', this.username, this.password);
+     return {username:this.username,password: this.password}
     },
     resetFormData() {
       this.username = ''

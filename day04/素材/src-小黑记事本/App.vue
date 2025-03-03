@@ -1,44 +1,54 @@
 <template>
   <!-- 主体区域 -->
   <section id="app">
-    <!-- 输入框 -->
-    <header class="header">
-      <h1>小黑记事本</h1>
-      <input placeholder="请输入任务" class="new-todo" />
-      <button class="add">添加任务</button>
-    </header>
+  <TodoHeader @changeAdd="handerChange" ></TodoHeader>
 
     <!-- 列表区域 -->
-    <section class="main">
-      <ul class="todo-list">
-        <li class="todo">
-          <div class="view">
-            <span class="index">1.</span> <label>吃饭饭</label>
-            <button class="destroy"></button>
-          </div>
-        </li>
-      </ul>
-    </section>
-    
+   
+    <TodoMain :list="list" @del="handerDel"></TodoMain>
     <!-- 统计和清空 -->
-    <footer class="footer">
-      <!-- 统计 -->
-      <span class="todo-count">合 计:<strong> 1 </strong></span>
-      <!-- 清空 -->
-      <button class="clear-completed">
-        清空任务
-      </button>
-    </footer>
+    <TodoFooter :list="list" @empty="Empty"></TodoFooter>
   </section>
 </template>
 
 <script>
+import TodoHeader from './components/TodoHeader.vue';
+import TodoMain from './components/TodoMain.vue';
+import TodoFooter from './components/TodoFooter.vue';
 export default {
   data () {
+ 
     return {
+ list:JSON.parse(localStorage.getItem('list'))||[]
+    }
+  } ,
+   components:{
+      TodoHeader,
+      TodoMain,
+      TodoFooter
+    },
+    methods:{
+      handerChange(newvalue){
+this.list.unshift({id:+new Date() ,name:newvalue})
+
+      },
+      handerDel(id){
+this.list=this.list.filter(item=>item.id!==id)
+      },
+      Empty(){
+this.list=[]
+      }
+    },
+    watch:{
+      list:{
+        deep:true,
+        handler(newvalue){
+          localStorage.setItem('list',JSON.stringify(newvalue))
+        }
+      }
+      
 
     }
-  }
 }
 </script>
 

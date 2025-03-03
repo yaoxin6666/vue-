@@ -1,7 +1,7 @@
-<template>
+ <template>
   <div class="app">
-    <button>退出按钮</button>
-    <BaseDialog></BaseDialog>
+    <button @click="isShow=true">退出按钮</button>
+    <BaseDialog :isShow.sync="isShow"></BaseDialog>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import BaseDialog from "./components/BaseDialog.vue"
 export default {
   data() {
     return {
-
+isShow:false
     }
   },
   methods: {

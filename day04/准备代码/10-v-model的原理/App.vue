@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <input type="text" />
+    <input v-model="msg1" type="text" />
     <br />
-    <input type="text" >
+    <input :value="msg2" @input="msg2=$event.target.value" type="text" >
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       msg1: '',
+      msg2:''
     }
   },
 }

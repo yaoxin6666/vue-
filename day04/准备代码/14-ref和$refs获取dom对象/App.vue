@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <!-- <div class="base-chart-box">
+    <div class="base-chart-box" style="width: 300px;height: 300px;">
       这是一个捣乱的盒子
-    </div> -->
+    </div>
     <BaseChart></BaseChart>
   </div>
 </template>

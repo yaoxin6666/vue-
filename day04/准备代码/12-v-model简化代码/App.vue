@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <BaseSelect></BaseSelect>
+    <BaseSelect v-model="selectId"></BaseSelect> <!-- 等价于:value="selectId"  @input="selectId=$event" -->
   </div>
 </template>
 

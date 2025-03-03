@@ -6,7 +6,7 @@
     </div>
     <div v-else>
       <span>{{ title }}</span>
-      <button>编辑</button>
+      <button @click="handelEdit">编辑</button>
     </div>
   </div>
 </template>
@@ -21,7 +21,12 @@ export default {
     }
   },
   methods: {
-   
+   handelEdit(){
+this.isShowEdit=true
+this.$nextTick(()=>{
+  this.$refs.inp.focus()
+})
+   }
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="base-chart-box">子组件</div>
+  <div class="base-chart-box" ref="mychart">子组件</div>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ import * as echarts from 'echarts'
 export default {
   mounted() {
     // 基于准备好的dom，初始化echarts实例
-    const myChart = echarts.init('dom对象')
+    const myChart = echarts.init(this.$refs.mychart)
     // 绘制图表
     myChart.setOption({
       title: {

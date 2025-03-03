@@ -2765,13 +2765,13 @@
   "resolved" "https://registry.npmmirror.com/easy-stack/-/easy-stack-1.0.1.tgz"
   "version" "1.0.1"
 
-"echarts@^5.4.2":
-  "integrity" "sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA=="
-  "resolved" "https://registry.npmmirror.com/echarts/-/echarts-5.4.2.tgz"
-  "version" "5.4.2"
+"echarts@^5.6.0":
+  "integrity" "sha512-oTbVTsXfKuEhxftHqL5xprgLoc0k7uScAwtryCgWF6hPYFLRwOUHiFmHGCBKP5NPFNkDVopOieyUqYGH8Fa3kA=="
+  "resolved" "https://registry.npmmirror.com/echarts/-/echarts-5.6.0.tgz"
+  "version" "5.6.0"
   dependencies:
     "tslib" "2.3.0"
-    "zrender" "5.4.3"
+    "zrender" "5.6.1"
 
 "ee-first@1.1.1":
   "integrity" "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="
@@ -6157,9 +6157,9 @@
     "normalize-path" "^1.0.0"
     "strip-indent" "^2.0.0"
 
-"zrender@5.4.3":
-  "integrity" "sha512-DRUM4ZLnoaT0PBVvGBDO9oWIDBKFdAVieNWxWwK0niYzJCMwGchRk21/hsE+RKkIveH3XHCyvXcJDkgLVvfizQ=="
-  "resolved" "https://registry.npmmirror.com/zrender/-/zrender-5.4.3.tgz"
-  "version" "5.4.3"
+"zrender@5.6.1":
+  "integrity" "sha512-OFXkDJKcrlx5su2XbzJvj/34Q3m6PvyCZkVPHGYpcCJ52ek4U/ymZyfuV1nKE23AyBJ51E/6Yr0mhZ7xGTO4ag=="
+  "resolved" "https://registry.npmmirror.com/zrender/-/zrender-5.6.1.tgz"
+  "version" "5.6.1"
   dependencies:
     "tslib" "2.3.0"

@@ -1,6 +1,8 @@
 <template>
   <div class="app">
-    <BaseSelect></BaseSelect>
+    <BaseSelect 
+    :selectId="selectId"
+    @changeId="selectId = $event"></BaseSelect>
   </div>
 </template>
 
@@ -15,13 +17,7 @@ export default {
   components: {
     BaseSelect,
   },
-  methods: {
-    handleChange(e) {
-      console.log(e);
-      this.selectId = e
-    }
-    
-  }
+
 }
 </script>
 
