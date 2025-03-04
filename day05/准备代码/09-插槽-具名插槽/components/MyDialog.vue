@@ -1,23 +1,33 @@
 <template>
   <div class="dialog">
     <div class="dialog-header">
-      标题
+        <slot name="head">
+             <h3>友情提示</h3>
+      <span class="close">✖️</span>
+        </slot>       
     </div>
 
     <div class="dialog-content">
-      <slot></slot>
+        <slot name="content">姚鑫6666
+          <!-- 后备内容，默认值 -->
+        </slot>
     </div>
-    <div class="dialog-footer">
-      <button>按钮</button>
+    <div class="dialog-footer">   
+        <slot name="footer">
+ <button>取消</button>
+      <button>确认</button>
+        </slot> 
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {}
-  },
+  data () {
+    return {
+
+    }
+  }
 }
 </script>
 

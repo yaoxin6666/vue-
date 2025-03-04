@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="box">
+    <div class="box " v-loading="isLoading">
       <ul>
         <li v-for="item in list" :key="item.id" class="news">
           <div class="left">
@@ -29,7 +29,8 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      list: []
+      list: [],
+      isLoading:true
     }
   },
   async created () {
@@ -39,7 +40,18 @@ export default {
     setTimeout(() => {
       // 2. 更新到 list 中
       this.list = res.data.data
+      this.isLoading=false
     }, 2000)
+  },
+  directives:{
+    loading:{
+inserted(el,binding){
+binding.value ? el.classList.add('loading') : el.classList.remove('loading')
+},
+update(el,binding){
+  binding.value ? el.classList.add('loading') : el.classList.remove('loading')
+}
+    }
   }
 }
 </script>

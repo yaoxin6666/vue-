@@ -1,9 +1,17 @@
 <template>
   <div>
-    <MyTable>
+    <MyTable :data="list">
+      <template #default="obj">
+   <button @click="del(obj.rom.id)">删除</button>
+      </template>
+   
     </MyTable>
-    <MyTable>
-    </MyTable>
+    <MyTable :data="list2" #default="{rom}">
+      <template>
+          <button @click="show(rom)">查看</button>
+      </template>
+    
+    </MyTable >
   </div>
 </template>
 
@@ -26,6 +34,16 @@ export default {
   },
   components: {
     MyTable
+  },
+  methods:{
+del(id){
+this.list=this.list.filter(item=>item.id!==id)
+},
+show(rom){
+  console.log(rom);
+  
+  alert('姓名'+rom.name+'年龄'+rom.age)
+}
   }
 }
 </script>

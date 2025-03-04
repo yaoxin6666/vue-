@@ -9,28 +9,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>小张</td>
-        <td>8</td>
+      <tr v-for="(item,index) in data" :key="item.id">
+        <td>{{index+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
         <td>
-          <button>删除</button>
-        </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>小张</td>
-        <td>8</td>
-        <td>
-          <button>删除</button>
-        </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>小张</td>
-        <td>8</td>
-        <td>
-          <button>删除</button>
+          <!-- 给slot标签，添加属性的方式传值 -->
+        <slot :rom="item" msg="测试文本"></slot>
+        <!-- 将所有的属性添加到一个对象中 -->
+         <!-- {
+        rom: { id: 1, name: '张小花', age: 18 },
+        msg:测试文本
+        } -->
         </td>
       </tr>
     </tbody>
