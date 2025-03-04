@@ -1,12 +1,12 @@
 <template>
   <div class="app">
     <div v-if="isShowEdit">
-      <input type="text" v-model="editValue" ref="inp" v-focus/>
+      <input type="text" v-model="editValue" ref="inp" />
       <button>确认</button>
     </div>
     <div v-else>
       <span>{{ title }}</span>
-      <button @click="handelEdit">编辑</button>
+      <button>编辑</button>
     </div>
   </div>
 </template>
@@ -21,12 +21,7 @@ export default {
     }
   },
   methods: {
-   handelEdit(){
-this.isShowEdit=true
-this.$nextTick(()=>{
-  this.$refs.inp.focus()
-})
-   }
+   
   },
 }
 </script>
