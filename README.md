@@ -258,3 +258,37 @@ VueRouter
 .vue文件 本质无区别
 分页组件放在views文件夹里
 复用组件放在components文件夹里
+路由的封装抽离的好处：拆分模块，利于维护
+绝对路径：@指代src目录，可以用于快速引入组件
+![image](https://github.com/user-attachments/assets/16637298-6c9d-40b5-9dc7-77644074fd98)
+![image](https://github.com/user-attachments/assets/43ea1ce1-0928-4f2d-bcb3-769f5fe0dc2c)
+![image](https://github.com/user-attachments/assets/f5442391-ce07-4800-883a-2f56c214c398)
+![image](https://github.com/user-attachments/assets/860ba1b8-313e-490e-884a-b670742d1508)
+声明式导航 - 跳转传参
+1.  查询参数传参
+2.  动态路由传参
+[image](https://github.com/user-attachments/assets/0b22f635-6aba-4ed4-a5df-4d082150deb4)
+![image](https://github.com/user-attachments/assets/3d825ed4-3b63-49fd-9c4f-21f090429657)
+![image](https://github.com/user-attachments/assets/6712cede-9c4c-4eb2-9cfa-3fa3302fe8ed)
+![image](https://github.com/user-attachments/assets/b19bae7d-bb65-47a1-93d5-f7a002cbb694)
+![image](https://github.com/user-attachments/assets/611900d5-ff1b-42d0-b1b6-25f1ddc64f17)
+![image](https://github.com/user-attachments/assets/497435ad-68c0-4797-b118-ab74284e8634)
+![image](https://github.com/user-attachments/assets/12d9de76-911e-4f32-b28c-e927ebd38cd8)
+![image](https://github.com/user-attachments/assets/830ba0f4-1aef-4315-b36e-5adce6151485)
+![image](https://github.com/user-attachments/assets/efbf2ff4-0cef-4723-afb0-94065137f17a)
+![image](https://github.com/user-attachments/assets/09c85c1f-aebf-4164-b891-89e0dd834502)
+![image](https://github.com/user-attachments/assets/5afb4249-5fd1-4414-b49d-fd52c1b067f5)
+![image](https://github.com/user-attachments/assets/f2f00c7b-16b3-4b33-82e9-33bcb99fe216)
+![image](https://github.com/user-attachments/assets/df2ba3fb-e82d-41ed-aebd-99803fb74561)
+![image](https://github.com/user-attachments/assets/c5996595-d476-4aa9-99d6-5712a43971be)
+![image](https://github.com/user-attachments/assets/6f3b5643-caff-4bb9-ae11-65336bb5884a)
+![image](https://github.com/user-attachments/assets/8cc1eb69-05e7-471b-bb47-168ebe735edc)
+![image](https://github.com/user-attachments/assets/bf0c3d79-03c8-45eb-ac37-8bbad5154a21)
+![image](https://github.com/user-attachments/assets/c680a6b7-fae4-44c2-b00d-bb1f7bb80027)
+![image](https://github.com/user-attachments/assets/289c3628-6e43-4276-a9ca-8ea3c50e7051)
+![image](https://github.com/user-attachments/assets/46924d3f-a9b1-407a-85f9-bbca7f681d04)
+![image](https://github.com/user-attachments/assets/f7fd4782-7670-47da-bac2-1339ee821afd)
+![image](https://github.com/user-attachments/assets/41c93675-2611-4f5e-87a5-0a40a3030604)
+![image](https://github.com/user-attachments/assets/5f6d744b-686a-4c66-a12f-59903550d6e7)
+![image](https://github.com/user-attachments/assets/e747864e-b1d9-4add-850c-e8e5ebf93160)
+![image](https://github.com/user-attachments/assets/ba24cbf9-ecf5-4440-936c-666a020ebeb4)
