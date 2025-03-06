@@ -246,3 +246,15 @@ l 语法: 在 <slot> 标签内，放置内容,  作为默认显示内容
 2. 所有添加的属性, 都会被收集到一个对象中
 3. 在template中, 通过  ` #插槽名= "obj" ` 接收，默认插槽名为 default
 ![image](https://github.com/user-attachments/assets/fe1ccb34-2341-4010-84ed-c641f38eb27f)
+单页应用程序: SPA - Single Page Application：所有功能在一个html页面上实现
+![image](https://github.com/user-attachments/assets/3e591f16-3e8c-4fc6-b0c6-b449c019b8e8)
+优点：按需更新性能高，开发效率高，用户体验好
+缺点：学习成本，首屏加载慢，不利于SEO
+路由：设备和ip的映射关系
+Vue中路由：路径 和 组件 的 映射 关系
+VueRouter
+![image](https://github.com/user-attachments/assets/c2d0c9f4-8dee-495b-8e3d-dea4c02b1e6e)
+![image](https://github.com/user-attachments/assets/7c253a06-d744-4789-ab9d-96cf3656c840)
+.vue文件 本质无区别
+分页组件放在views文件夹里
+复用组件放在components文件夹里
