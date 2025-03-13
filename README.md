@@ -292,3 +292,22 @@ VueRouter
 ![image](https://github.com/user-attachments/assets/5f6d744b-686a-4c66-a12f-59903550d6e7)
 ![image](https://github.com/user-attachments/assets/e747864e-b1d9-4add-850c-e8e5ebf93160)
 ![image](https://github.com/user-attachments/assets/ba24cbf9-ecf5-4440-936c-666a020ebeb4)
+vuex
+![image](https://github.com/user-attachments/assets/edfe83ba-c61e-41a8-913d-be9aaeba0c1d)
+state:State 提供唯一的公共数据源，所有共享的数据都要统一放到 Store 中的 State 中存储。
+在 state 对象中可以添加我们要共享的数据。
+![image](https://github.com/user-attachments/assets/a4672b30-6fec-4657-9d67-b59ab8672966)
+![image](https://github.com/user-attachments/assets/31bbff96-393f-484d-9aa7-db34268a6617)
+![image](https://github.com/user-attachments/assets/294daa04-4a21-4d6d-9684-a19ed1f939eb)
+![image](https://github.com/user-attachments/assets/7894af79-f00b-4f84-aa63-1b96e5501357)
+![image](https://github.com/user-attachments/assets/29709d1c-798b-4a88-9727-8bff71c00f6c)
+![image](https://github.com/user-attachments/assets/83b0f23f-f5fc-44fc-940e-04ed30f81fda)
+![image](https://github.com/user-attachments/assets/ca940e19-bd69-4641-9a37-8075a8bd5cd9)
+![image](https://github.com/user-attachments/assets/13f733fd-b7cd-44f6-acab-c697ae28d8ce)
+![image](https://github.com/user-attachments/assets/5bf0228f-4732-456a-a9ed-3688389f7b0b)
+![image](https://github.com/user-attachments/assets/a83d0e5a-1e4b-48b4-96f9-de974a5149f3)
+![image](https://github.com/user-attachments/assets/d56046f4-ecd3-4004-a182-ae073e195193)
+![image](https://github.com/user-attachments/assets/63d11e94-d8ec-48a4-95b8-4393f3b7c35c)
+![image](https://github.com/user-attachments/assets/32333b62-48e5-4466-beb8-bfce49d9a754)
+![image](https://github.com/user-attachments/assets/319078a8-fdc3-4999-a741-abb5f8486bed)
+![image](https://github.com/user-attachments/assets/404a197d-d3b1-4efb-a0ef-6d47937e85ef)
